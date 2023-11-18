@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Блокнот</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <textarea spellcheck="false" placeholder="Введите текст" required></textarea>
+      <div class="file-options">
+        <div class="option file-name">
+          <label>Имя файла</label>
+          <input type="text" spellcheck="false" placeholder="Введите имя файла">
+        </div>
+        <div class="option save-as">
+          <label>Сохранить как</label>
+          <div class="select-menu">
+            <select>
+              <option value="text/plain">Текст(.txt)</option>
+              <option value="text/javascript">JS Файл(.js)</option>
+              <option value="text/html">HTML Файл(.html)</option>
+              <option value="application/msword">Doc Файл(.doc)</option>
+            </select>
+          </div>
+        </div>
+        <div class="option font">
+          <label>Размер текста</label>
+          <div class="select-menu">
+            <select>
+              <option>20</option>
+              <option>26</option>
+              <option>32</option>
+              <option>38</option>
+            </select>
+          </div>
+        </div>
+        <div class="option family">
+          <label>Шрифт</label>
+          <div class="select-menu">
+            <select>
+              <option value="'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Calibri</option>
+              <option value="'Times New Roman', Times, serif">Times</option>
+              <option value="Verdana, Geneva, Tahoma, sans-serif">Geneva</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button class="save-btn" type="button">Сохранить</button>
+    </div>
+
+  </body>
+</html>

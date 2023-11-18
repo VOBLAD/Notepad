@@ -1,0 +1,106 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  background: #1735b8;
+}
+.wrapper{
+  text-align: center;
+  width: 843px;
+  border-radius: 7px;
+  background: #fff;
+  padding: 30px 25px 40px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+.wrapper :where(textarea, input, select, button){
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.wrapper :where(textarea, input)::placeholder{
+  color: #aaa;
+}
+.wrapper :where(textarea, input):focus{
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+}
+.textarea{
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper textarea{
+  height: 270px;
+  resize: none;
+  padding: 8px 13px;
+  border: 1px solid #ccc;
+}
+.wrapper .file-options{
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.file-options .option{
+  width: calc(100% / 2 - 8px);
+}
+.option label{
+  font-size: 17px;
+}
+.option :where(input, .select-menu){
+  height: 50px;
+  padding: 0 13px;
+  margin-top: 6px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+.option .select-menu select{
+  height: 50px;
+  background: none;
+}
+.wrapper .save-btn{
+  width: 50%;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.6;
+  padding: 16px 0;
+  margin-top: 20px;
+  pointer-events: none;
+  background: #1735b8;
+}
+.save-btn:hover{
+  box-shadow: 0 0 20px#1735b8;
+}
+textarea:valid ~ .save-btn{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 475px) {
+  .wrapper{
+    padding: 25px 18px 30px;
+  }
+  .wrapper :where(textarea, input, select, button, label){
+    font-size: 16px!important;
+  }
+  .file-options .option{
+    width: calc(100% / 2 - 5px);
+  }
+  .option :where(input, .select-menu){
+    padding: 0 10px;
+  }
+  .wrapper .save-btn{
+    padding: 15px 0;
+  }
+}
